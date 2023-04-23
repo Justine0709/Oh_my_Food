@@ -1,0 +1,103 @@
+.section-img {
+    &__restaurant{
+    width: 100%;
+    height: 275px;
+    object-fit:cover;
+    position: relative;
+    order:2;
+    }
+}
+
+.menu{
+    background-color:$main-grey-color;
+    border-radius: 25px 25px 0 0;
+    position: relative;
+    top:-20px;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width:376px) {
+        width: 80%;
+        margin-left: 10%;;
+        margin-right: 10%;
+    
+    }
+    &__tittle{
+        display: flex;
+        justify-content: center;
+        padding-left: 17px;
+        padding-right: 17px;
+        gap:20px;
+    }
+    &__article{
+        @media (min-width:376px) {
+            width: 70%;
+            
+        }
+    }
+}
+
+.menu__tittle--underline{
+    text-decoration: underline 3px $green-mint ;
+    text-underline-offset:8px;
+}
+
+.menu__choice{
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &__subtittle{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between ;
+    }
+    &__price{
+        display: inline-block;
+        font-weight: 700;
+        padding-right: 25px;
+        transform: translateX(0);
+        transition: all 0.1s;
+    }
+    .fa-circle-check{
+       display:flex ;
+       align-items: center;
+       justify-content: center;
+        color: white;
+        background-color: $green-mint;
+        border-radius:0 15px 15px 0;
+        width: 15%;
+        height: 100%;
+        font-weight: 700;
+        font-size: 18px;
+        position: absolute;
+        z-index: 0;
+        top:0%;
+        right: -15%;
+        transform: translatex(0);
+        transition: all 0.1s;    
+      }
+      
+    &:hover .menu__choice__price{
+        transform: translateX(-100%);
+        
+    }
+    &:hover .fa-circle-check{
+        transform: translateX(-100%);
+        
+    }
+}
+
+
+
+
