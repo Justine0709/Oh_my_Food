@@ -4,15 +4,7 @@
     flex-direction: column;
     padding-left: 25px;
     padding-right: 20px;
-    @media (min-width:376px)and (max-width:1000px) {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    @media (min-width:1000px) and (max-width:1100px) {
-        padding-left: 10%;
-        padding-right: 2%;
-    }
-    @media (min-width:1100px) {
+    @media (min-width:376px){
         padding-left: 10%;
         padding-right: 10%;
     }
@@ -31,7 +23,8 @@
             justify-content: flex-start;
         }
     }
-.section-functioning__steps__button{
+    .section-functioning__steps{
+    &--button{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,9 +33,25 @@
     background-color: $main-grey-color;
     border-radius: 25px;
     position: relative;
+    z-index:-1;
     @include box-shadow-button-grey;
     @media (min-width:500px) and (max-width:900px) {
         width: 100%;
+    }
+    }
+    &--number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 25px;
+        color: white;
+        background-color:$purpule-color;  
+        position:relative;
+        z-index: 0;
+        top: 45px;
+        left: -15px;
     }
 }
 
@@ -52,40 +61,27 @@
     }
     .fa-store{
         color: $purpule-color;
-        margin-right:25px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     }
     .fa-mobile-screen-button{
-        margin-right: 22px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .fa-list {
-        margin-right: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-}
-
-.section-functioning__steps__number{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 25px;
-    color: white;
-    background-color:$purpule-color;  
-    position:absolute;
-    z-index: 1;
-    top: 25px;
-    left: -10px;
-}
-
+    
 .step{
     position: relative;
     width: 100%;
     @media (min-width:1000px) {
         width: 30%;
+        max:471px;
     }  
 }
-
-
 
 .section-restaurant{
     background-color: $main-grey-color;
@@ -123,24 +119,9 @@
     background: #FFFFFF;
     @include box-shadow-card;
     border-radius: 15px;
-
-    @media (min-width:800px)and (max-width:1000px) {
-        max-width: 300px;
-        
-    }
-    @media (min-width:1000px)and (max-width:1100px) {
-        max-width: 390px;
-    }
-    @media (min-width:1100px)and (max-width:1200px) {
-        max-width: 420px;
-
-    }
-    @media (min-width:1201px)and (max-width:1300px) {
-        max-width: 471px;
-
-    }
-    @media (min-width:1300px) {
-        max-width: 498px;
+    @media (min-width:800px) {
+        width: 48%;
+        max-width: 500px;
     }
     &__new{
         position: relative;
@@ -182,35 +163,6 @@
         padding-right: 35px;
         padding-top: 16px;
     }
-    .fa-heart{
-        font-size: 22px;
-    }
-}
-
-.fa-heart{
-    position: absolute;
-}
-
-.heart-clic{
-    color: transparent;
-    @include LG-pinkviolet;
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity:0;
-    &:hover{
-        opacity: 1;
-        animation-name: heart-clic;
-        animation-duration: 0.5s;
-       
-        }
-}
-@keyframes heart-clic{
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity:1;
-    }
 }
 
 .section-restaurant img{
@@ -219,6 +171,7 @@
     height: 231px;
     object-fit: cover;
 }
+
 
 
 
