@@ -31,7 +31,13 @@
     }
     &__tittle{
         display: flex;
-        gap:40px;
+        justify-content: space-between;
+        margin-right: 6%;
+        @media (min-width:376px) {
+            justify-content: center;
+            gap:40px;
+        }
+
     }
 }
 

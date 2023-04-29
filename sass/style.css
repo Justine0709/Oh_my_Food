@@ -466,7 +466,14 @@ h6 {
 }
 .menu__tittle {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  margin-right: 6%;
+}
+@media (min-width: 376px) {
+  .menu__tittle {
+    justify-content: center;
+    gap: 40px;
+  }
 }
 
 .menu__tittle--underline {
