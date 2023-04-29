@@ -138,8 +138,7 @@ h6 {
   }
 }
 .footerbar--menu {
-  position: relative;
-  top: -20px;
+  margin-top: -20px;
 }
 .footerbar__logo {
   font-weight: 400;
@@ -451,7 +450,7 @@ h6 {
 }
 @media (min-width: 1024px) {
   .order {
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
 }
@@ -543,51 +542,69 @@ h6 {
 
 .starter,
 .main,
-.dessert {
+.dessert,
+.dessert-b,
+.main-b {
   transform: scaleX(0);
 }
 
 .menu__choice,
 .starter,
+.main-b,
 .main,
-.dessert {
+.dessert,
+.dessert-b {
   animation: choice 1s;
   animation-fill-mode: forwards;
   transform-origin: 50% 0%;
 }
 
-.choice2 {
+.choice2,
+.choice-b {
   animation-delay: 1s;
 }
 
-.choice3 {
+.choice3,
+.choice-c {
   animation-delay: 2s;
 }
 
 .choice4,
+.choice-d,
 .main {
   animation-delay: 3s;
 }
 
-.choice5 {
+.choice5,
+.choice-e,
+.main-b {
   animation-delay: 4s;
 }
 
-.choice6 {
+.choice6,
+.choice-f {
   animation-delay: 5s;
 }
 
 .choice7,
+.choice-g,
 .dessert {
   animation-delay: 6s;
 }
 
-.choice8 {
+.choice8,
+.choice-h,
+.dessert-b {
   animation-delay: 7s;
 }
 
-.choice9 {
+.choice9,
+.choice-i {
   animation-delay: 8s;
+}
+
+.choice-j {
+  animation-delay: 9s;
 }
 
 @keyframes choice {
@@ -639,8 +656,8 @@ h6 {
 .loader {
   display: flex;
   justify-content: center;
-  position: absolute;
-  padding-top: 60%;
+  align-items: center;
+  position: fixed;
   background-color: #F7F7F7;
   width: 100%;
   height: 100%;
@@ -649,11 +666,6 @@ h6 {
   animation: page-loader 0.3s ease-in-out;
   animation-delay: 5s;
   animation-fill-mode: forwards;
-}
-@media (min-width: 700px) {
-  .loader {
-    padding-top: 40%;
-  }
 }
 
 @keyframes page-loader {
