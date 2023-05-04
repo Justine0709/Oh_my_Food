@@ -1,0 +1,55 @@
+.button{
+    font-size:16px;
+    font-weight: 700;
+    width:186px;
+    height: 50px;
+    border-radius: 25px;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 40px;
+    @include LG-pinkviolet;
+    opacity: 1;
+    transition: all 0.4s;
+    &:hover{
+        opacity:0.85;
+        @include box-shadow-button-violet-hover;
+    }
+    &--welcome{
+        width: 218px;
+        margin-top: 27px;
+    }
+    &--menu{
+        display: flex;
+        align-items: center;
+        
+
+    }
+}
+
+.fa-heart{
+    font-size: 22px;
+    position: absolute;
+}
+
+.heart-clic{
+    position: absolute;
+    color: transparent;
+    @include LG-pinkviolet;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity:0;
+    transition: all 1s;
+    &:hover{
+        opacity: 1;
+    }
+}
+.heart-menu{
+    top:42px;
+}
+
+.button--menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
