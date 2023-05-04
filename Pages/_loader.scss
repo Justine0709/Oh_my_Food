@@ -40,6 +40,11 @@
     animation: page-loader 0.3s ease-in-out;
     animation-delay:5s;
     animation-fill-mode: forwards;
+    @media (min-width:1440px) {
+        width:1440px;
+        margin: auto;
+    }
+
 }
 
 @keyframes page-loader{
