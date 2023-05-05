@@ -333,7 +333,7 @@ h6 {
 @media (min-width: 1000px) {
   .step {
     width: 30%;
-    max: 471px;
+    max-width: 471px;
   }
 }
 
